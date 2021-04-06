@@ -10,12 +10,21 @@
     */
 
     /*ALT COLORS*/
-    
+    /*
     --main-bg-color: #EFF1F3;
     --secondary-bg-color: #696773;
     --main-text-color: #272727;
     --secondary-text-color: #FED766;
     --tertiary-text-color: #009FB7;
+    */
+
+    /*TERTIARY COLORS*/
+    
+    --main-bg-color: #313638;
+    --secondary-bg-color: #EEE5E9;
+    --main-text-color: #A27035;
+    --secondary-text-color: #EF476F;
+    --tertiary-text-color: #A9FFCB;
     
 }
 
@@ -24,6 +33,13 @@ body {
     font-family:'Montserrat';
     color: var(--main-text-color)
 }
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
 a:visited {
     text-decoration-color: none;
     color: var(--main-text-color);
@@ -39,15 +55,30 @@ a {
     transition: all 0.4s ease;
 }
 
+.anchor{
+    display: block;
+    height: 115px; /*same height as header*/
+    margin-top: -115px; /*same height as header*/
+    visibility: hidden;
+}
+
+#navbar {
+    transition: all 0.6s ease-in-out;
+}
 #navigation {
     display: flex;
     background-color: var(--secondary-bg-color);
-    justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    border-bottom: 6px solid var(--gold);
+    border-bottom: 6px solid var(--tertiary-text-color);
     width: 100%;
     position: fixed;
+    box-sizing: border-box;
+    /*height: 100%;*/
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1920px;
+    padding: 0 72px
 }
 #name {
     float: left;
@@ -65,4 +96,8 @@ a {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+p {
+    height: 1000px;
 }

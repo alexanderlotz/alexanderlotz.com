@@ -9,41 +9,48 @@
         <title>Alexander Lotz</title>
 
         <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="test.js"></script>
+        <script src="test_scrollClick.js"></script>
     </head>
     <body>
-        <div id="navigation">
-            <nav>
-                <div id="name">
+        <div id="navbar">
+            <nav id="navigation">
+                <div id="logo">
                     <a href="#">Alexander Lotz</a>
                 </div>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="">Resume</a></li>
+                    <li class="nav-item"><a class="click" href="#about_anchor">About</a></li>
+                    <li class="nav-item"><a class="click" href="#experience_anchor">Home</a></li>
+                    <li class="nav-item"><a class="click" href="#projects_anchor">Projects</a></li>
+                    <li class="nav-item"><a class="click" href="#contact_anchor">Contact</a></li>
+                    <li class="nav-item"><a href="">Resume</a></li>
                 </ul>        
             </nav>
         </div>
         <h1>Alexander Lotz</h1>
+        <span id="about_anchor" class="anchor"></span>
         <div id="about">
             <h2>About</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat venenatis consequat. Morbi tincidunt sit amet quam nec sagittis. Maecenas nibh dolor, euismod quis ante et, accumsan vehicula dui. Pellentesque ullamcorper rutrum nulla id ullamcorper. Nullam elementum odio mi, vitae sollicitudin ipsum vestibulum a. Pellentesque eleifend dui sed neque placerat, eu lobortis lectus ultrices. Fusce eleifend augue in tristique ullamcorper. Maecenas commodo molestie odio eu facilisis. Praesent pellentesque at mauris non tincidunt.
             </p>
         </div>
+        <span id="experience_anchor" class="anchor"></span>
         <div id="experience">
             <h2>Experience</h2>
             <p>
                 Pellentesque diam elit, iaculis et sem ut, hendrerit dictum velit. Duis ac risus bibendum quam mattis molestie. Fusce tristique dictum fermentum. In vel neque venenatis, bibendum sapien quis, tempor quam. Aliquam vehicula dui ut pulvinar pretium. Sed non ex nec dui imperdiet viverra. Aliquam quam ligula, fringilla ut nunc vitae, commodo elementum elit.
             </p>
         </div>
+        <span id="projects_anchor" class="anchor"></span>
         <div id="projects">
             <h2>Projects</h2>
             <p>
                 Nullam accumsan odio libero, ut lacinia tellus placerat et. Nulla dictum libero magna, sit amet porttitor elit suscipit in. Aenean sollicitudin mi diam, et laoreet mauris egestas eget. Praesent eros velit, varius in sollicitudin sed, eleifend vitae tortor. Suspendisse potenti. Maecenas facilisis molestie est, vel faucibus ante suscipit vitae. Sed vel mi eu felis porta laoreet id in mauris. Nullam eget accumsan est, non posuere sem. Pellentesque luctus nulla faucibus sodales aliquet. Cras mollis metus ut rutrum fringilla. Proin consectetur odio quis tellus malesuada, efficitur sollicitudin risus mollis. Maecenas sit amet auctor ipsum, quis dictum enim.
             </p>
         </div>
+        <span id="contact_anchor" class="anchor"></span>
         <div id="contact">
             <h2>Contact</h2>
             <p>

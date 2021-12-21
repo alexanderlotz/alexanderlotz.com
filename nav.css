@@ -1,0 +1,171 @@
+html {
+    /* Colors */
+    --baby-powder: #FDFFF7;
+    --raisin-black: #1E212B;
+    --ultra-red: #9C3848;
+    --atomic-tangerine: #FF934F;
+    --pacific-blue: #47A8BD;
+    --charcoal: #313646;
+}
+
+/** Standard Nav Bar **/
+nav {
+    background-color: var(--charcoal);
+    color: var(--baby-powder);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0;
+    font-family:'Montserrat';
+    text-transform: uppercase;
+    position: fixed;
+    font-weight: 600;
+    max-width: 70rem;
+    /* border-bottom: 2px solid var(--charcoal); */
+    border-radius: 0 0 1rem 1rem;
+    z-index: 1;
+}
+
+nav a {
+    color: var(--baby-powder);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+nav a:active {
+    color: var(--baby-powder);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+nav a:hover {
+    color: var(--pacific-blue);
+    transform: scale(1.05);
+}
+
+nav li {
+    transition: all 0.5s ease;
+}
+
+nav li:hover {
+    transform: scale(.95);
+}
+
+#navLogo {
+    text-align: center;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+#navLogo:hover{
+    transform: scale(.95);
+}
+
+#navLinks {
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+}
+/** End Standard Nav Bar **/
+
+/** Hamburger **/
+/** Credit to Kevin Powell **/
+#navToggle {
+    position: absolute;
+    right: 0;
+    background: var(--charcoal);
+    padding: 0.5rem;
+    border: 0;
+    border-radius: .25em 0 0 .25em;
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 2em;
+    height: 3px;
+    background: var(--baby-powder);
+    transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    bottom: 6px;
+}
+
+.hamburger::after {
+    top: 6px;
+}
+/** End Hamburger **/
+
+@media only screen and (max-width: 1120px) {
+    nav {
+        border-radius: 0;
+    }
+
+    #navLinks {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    #navToggle {
+        display: block;
+    }
+
+    #navLinks {
+        display: block;
+        right: 0;
+        top: 2rem;
+        background-color: var(--charcoal);
+        opacity: 90%;
+        width: auto;
+        position: absolute;
+        transform: translateX(100%);
+        transition: visibility 0s, transform 350ms ease-in-out
+    }
+
+    #navLinks a {
+        display: block;
+        padding: 2rem 4rem;
+    }
+
+    #navLogo {
+        display: block;
+    }
+
+    .nav-open #navLinks{
+        transform: translate(0);
+    }
+    
+    .nav-open #navLinks li{
+        border: 1px solid var(--raisin-black);
+        text-align: center;
+    }
+    /* Change this stuff below */
+    
+    .nav-open .hamburger {
+    transform: rotate(45deg);
+    }
+    
+    .nav-open .hamburger::before {
+    opacity: 0;
+    }
+    
+    .nav-open .hamburger::after {
+    transform: rotate(90deg) translate(-6px);
+    }
+}
